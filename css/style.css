@@ -14,22 +14,22 @@
     background-image: url(../../assets/mobile-index.jpeg);
   }
 }
-.cover_btn {
+.cover__btn {
   padding: 1em 2em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border: 1px solid #252422;
   background-color: #ffffff;
 }
-.cover_btn:hover {
-  background-color: #40403A;
+.cover__btn:hover {
+  background-color: #252422;
   border: 1px solid #ffffff;
   color: #ffffff;
   cursor: pointer;
 }
-.cover_btn-container {
+.cover__btn-container {
   margin: 2em;
 }
-.cover_container {
+.cover__container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -41,7 +41,7 @@
   color: #ffffff;
 }
 @media screen and (max-width: 1000px) {
-  .cover_container {
+  .cover__container {
     margin: none;
   }
 }
@@ -51,35 +51,20 @@
   justify-content: space-between;
   height: 8vh;
   width: 100%;
+  position: fixed;
 }
-.navbar_logo {
+.navbar__logo, .navbar__links {
   display: flex;
 }
-.navbar_logo_link {
-  display: flex;
-  align-items: center;
-  padding: 0 2em;
-  text-decoration: none;
-  color: black;
-}
-.navbar_logo_link:hover {
-  background-color: #40403A;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  cursor: pointer;
-}
-.navbar_links {
-  display: flex;
-}
-.navbar_links_link {
+.navbar__link {
   display: flex;
   align-items: center;
   padding: 0 2em;
   text-decoration: none;
   color: black;
 }
-.navbar_links_link:hover {
-  background-color: #40403A;
+.navbar__link:hover {
+  background-color: #252422;
   border: 1px solid #ffffff;
   color: #ffffff;
   cursor: pointer;
@@ -89,14 +74,34 @@
   display: flex;
   flex-direction: column;
 }
-.content_section {
+.content__about, .content__skills, .content__projects, .content__contact {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
 }
-.content_section_heading {
-  padding: 1em;
+.content__about {
+  justify-content: space-around;
+}
+.content__about__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+}
+.content__about__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5em;
+  width: 50%;
+}
+.content__about__img img {
+  height: 300px;
+}
+.content__skills, .content__projects, .content__contact {
+  justify-content: center;
+  align-items: center;
 }
 
 body {

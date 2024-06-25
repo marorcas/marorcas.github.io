@@ -6,28 +6,17 @@
     justify-content: space-between;
     height: 8vh;
     width: 100%;
+    position: fixed;
 
-    &_logo {
+    &__logo, &__links {
         display: flex;
-
-        &_link {
-            @include m.navbar-link-style;
-
-            &:hover {
-                @include m.link-hover;
-            }
-        }
     }
-
-    &_links {
-        display: flex;
         
-        &_link {
-            @include m.navbar-link-style;
+    &__link {
+        @include m.navbar-link-style;
 
-            &:hover {
-                @include m.link-hover;
-            }
+        &:hover {
+            @include m.link-hover;
         }
     }
 }
@@ -36,13 +25,37 @@
     display: flex;
     flex-direction: column;
 
-    &_section {
+    &__about, &__skills, &__projects, &__contact {
         @include m.full-screen;
         display: flex;
-        justify-content: center;
+    }
 
-        &_heading {
-            padding: 1em;
+    &__about {
+        justify-content: space-around;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5em;
         }
+
+        &__img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5em;
+            width: 50%;
+
+            img {
+                height: 300px;
+            }
+        }
+    }
+
+    &__skills, &__projects, &__contact {
+        justify-content: center;
+        align-items: center;
     }
 }

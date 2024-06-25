@@ -6,7 +6,7 @@
 }
 
 @mixin link-hover {
-    background-color: v.$medium-color;
+    background-color: v.$dark-color;
     border: 1px solid v.$white-color;
     color: v.$white-color;
     cursor: pointer;
