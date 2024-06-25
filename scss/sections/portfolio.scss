@@ -1,0 +1,48 @@
+@use "../partials/mixins" as m;
+@use "../partials/variables" as v;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    width: 100%;
+
+    &_logo {
+        display: flex;
+
+        &_link {
+            @include m.navbar-link-style;
+
+            &:hover {
+                @include m.link-hover;
+            }
+        }
+    }
+
+    &_links {
+        display: flex;
+        
+        &_link {
+            @include m.navbar-link-style;
+
+            &:hover {
+                @include m.link-hover;
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    &_section {
+        @include m.full-screen;
+        display: flex;
+        justify-content: center;
+
+        &_heading {
+            padding: 1em;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use "./sections/index.scss";
+@use "./sections/portfolio.scss";
+
+@use "./partials/mixins" as m;
+@use "./partials/variables" as v;
+
+body {
+    margin: 0;
+    font-family: v.$text-font;
+    color: v.$black-color;
+}

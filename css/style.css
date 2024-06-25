@@ -1,3 +1,108 @@
+.cover {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/web-index.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .cover {
+    background-image: url(../../assets/mobile-index.jpeg);
+  }
+}
+.cover_btn {
+  padding: 1em 2em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px solid #252422;
+  background-color: #ffffff;
+}
+.cover_btn:hover {
+  background-color: #40403A;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.cover_btn-container {
+  margin: 2em;
+}
+.cover_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0.5em 3em;
+  background-color: rgba(37, 36, 34, 0.5);
+  color: #ffffff;
+}
+@media screen and (max-width: 1000px) {
+  .cover_container {
+    margin: none;
+  }
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  width: 100%;
+}
+.navbar_logo {
+  display: flex;
+}
+.navbar_logo_link {
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+  text-decoration: none;
+  color: black;
+}
+.navbar_logo_link:hover {
+  background-color: #40403A;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.navbar_links {
+  display: flex;
+}
+.navbar_links_link {
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+  text-decoration: none;
+  color: black;
+}
+.navbar_links_link:hover {
+  background-color: #40403A;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content_section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content_section_heading {
+  padding: 1em;
+}
+
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
 
 /*# sourceMappingURL=style.css.map */

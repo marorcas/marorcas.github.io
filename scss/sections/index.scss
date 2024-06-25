@@ -1,0 +1,50 @@
+@use "../partials/mixins" as m;
+@use "../partials/variables" as v;
+@use "../partials/queries" as q;
+
+.cover {
+    @include m.full-screen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/web-index.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+
+    @include q.mobile {
+        background-image: url(../../assets/mobile-index.jpeg);
+    }
+
+    &_btn {
+        padding: 1em 2em;
+        font-family: v.$text-font;
+        border: 1px solid v.$dark-color;
+        background-color: v.$white-color;
+
+        &:hover {
+            @include m.link-hover;
+        }
+    }
+
+    &_btn-container {
+        margin: 2em;
+    }
+
+    &_container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        padding: 0.5em 3em;
+        background-color: rgb(#252422, 0.5);
+        color: v.$white-color;
+
+        @include q.mobile {
+            margin: none;
+        }
+    }
+}

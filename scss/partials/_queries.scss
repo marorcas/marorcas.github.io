@@ -1,0 +1,8 @@
+$width: 1000px;
+
+
+@mixin mobile {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

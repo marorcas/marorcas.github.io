@@ -1,0 +1,21 @@
+@use "./variables" as v;
+
+@mixin full-screen {
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin link-hover {
+    background-color: v.$medium-color;
+    border: 1px solid v.$white-color;
+    color: v.$white-color;
+    cursor: pointer;
+}
+
+@mixin navbar-link-style {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    text-decoration: none;
+    color: v.$black-color;
+}
