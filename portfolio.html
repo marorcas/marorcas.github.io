@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Maria | Portfolio</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -32,13 +33,49 @@
                         <h1 class="content__heading">About</h1>
                         <p class="content__para">Lorem, ipsum dolor sit amet conse ctetur adipi sicing elit. Dolor emque necess itatibus volu ptate dicta expedita! Doloribus error sint, nam quisquam minus repellendus fugit conse cte tur expedita dolor, dolores consequu ntur, earum volu ptatem! Debitis, est?</p>
                     </div>
+
                     <div class="content__about__img">
                         <img src="./assets/profile.jpeg" />
                     </div>
+                    <!-- <img class="content__about__img" src="./assets/profile.jpeg" /> -->
                 </div>
         
                 <div class="content__skills" id="skills">
                     <h1 class="content__heading">Skills</h1>
+
+                    <div class="content__skills__container">
+                        <div class="content__skills__icon">
+                            <img 
+                                class="content__skills__img" 
+                                title="Cascading Style Sheets"
+                                src="./assets/node_modules/bootstrap-icons/icons/filetype-css.svg"
+                            />
+                        </div>
+
+                        <div class="content__skills__icon">
+                            <img 
+                                class="content__skills__img" 
+                                title="HyperText Markup Language"
+                                src="./assets/node_modules/bootstrap-icons/icons/filetype-html.svg"
+                            />
+                        </div>
+                        
+                        <div class="content__skills__icon">
+                            <img 
+                                class="content__skills__img" 
+                                title="JavaScript"
+                                src="./assets/node_modules/bootstrap-icons/icons/filetype-js.svg"
+                            />
+                        </div>
+                        
+                        <div class="content__skills__icon">
+                            <img 
+                                class="content__skills__img" 
+                                title="Sassy CSS"
+                                src="./assets/node_modules/bootstrap-icons/icons/filetype-scss.svg"
+                            />
+                        </div>
+                    </div>
                 </div>
         
                 <div class="content__projects" id="projects">
@@ -47,10 +84,28 @@
         
                 <div class="content__contact" id="contact">
                     <h1 class="content__heading">Contact</h1>
+
+                    <div class="content__contact__container">
+                        <a class="content__contact__icon" href="https://github.com/marorcas" target="_blank">
+                            <img 
+                                class="content__contact__img" 
+                                title="https://github.com/marorcas"
+                                src="./assets/node_modules/bootstrap-icons/icons/github.svg"
+                            />
+                        </a>
+                        
+                        <a class="content__contact__icon" href="https://www.linkedin.com/in/marorcas/" target="_blank">
+                            <img 
+                                class="content__contact__img" 
+                                title="https://www.linkedin.com/in/marorcas/"
+                                src="./assets/node_modules/bootstrap-icons/icons/linkedin.svg"
+                            />
+                        </a>
+                    </div>
+
+                    <h3>placeholder@email.com</h3>
                 </div>
             </div>
         </main>
-        
-        <foote></foote>
     </body>
 </html>

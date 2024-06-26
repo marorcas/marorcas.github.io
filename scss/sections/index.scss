@@ -40,7 +40,7 @@
         text-align: center;
         margin: auto;
         padding: 0.5em 3em;
-        background-color: rgb(#252422, 0.5);
+        background-color: rgb(v.$dark-color, 0.5);
         color: v.$white-color;
 
         @include q.mobile {
