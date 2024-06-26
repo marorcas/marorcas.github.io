@@ -1,12 +1,14 @@
 @use "../partials/mixins" as m;
 @use "../partials/variables" as v;
-
+@use "../partials/queries" as q;
+ 
 .navbar {
     display: flex;
     justify-content: space-between;
     height: 8vh;
     width: 100%;
     position: fixed;
+    background-color: v.$white-color;
 
     &__logo, &__links {
         display: flex;
@@ -23,11 +25,16 @@
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 
     &__about, &__skills, &__projects, &__contact {
         @include m.full-screen;
         display: flex;
+
+        @include q.mobile {
+            flex-wrap: wrap;
+        }
     }
 
     &__about {
@@ -38,18 +45,23 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 5em;
+            padding: 3em;
+
+            // @include q.mobile {
+            //     padding: 3em;
+            // }
         }
 
         &__img {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            padding: 5em;
-            width: 50%;
+            align-items: center;
+            padding: 3em;
+            
+            
 
             img {
-                height: 300px;
+                height: 600px;
             }
         }
     }
@@ -57,5 +69,9 @@
     &__skills, &__projects, &__contact {
         justify-content: center;
         align-items: center;
+    }
+
+    &__para {
+        
     }
 }

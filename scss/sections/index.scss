@@ -8,14 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/web-index.jpeg);
+    background-image: url(../../assets/cover.jpg);
     background-size: cover;
     background-position: center;
     
 
-    @include q.mobile {
-        background-image: url(../../assets/mobile-index.jpeg);
-    }
+    // @include q.mobile {
+    //     background-image: url(../../assets/mobile-index.jpeg);
+    // }
 
     &__btn {
         padding: 1em 2em;

@@ -5,14 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/web-index.jpeg);
+  background-image: url(../../assets/cover.jpg);
   background-size: cover;
   background-position: center;
-}
-@media screen and (max-width: 1000px) {
-  .cover {
-    background-image: url(../../assets/mobile-index.jpeg);
-  }
 }
 .cover__btn {
   padding: 1em 2em;
@@ -52,6 +47,7 @@
   height: 8vh;
   width: 100%;
   position: fixed;
+  background-color: #ffffff;
 }
 .navbar__logo, .navbar__links {
   display: flex;
@@ -72,12 +68,18 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .content__about, .content__skills, .content__projects, .content__contact {
   height: 100vh;
   width: 100%;
   display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .content__about, .content__skills, .content__projects, .content__contact {
+    flex-wrap: wrap;
+  }
 }
 .content__about {
   justify-content: space-around;
@@ -87,23 +89,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5em;
+  padding: 3em;
 }
 .content__about__img {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 5em;
-  width: 50%;
+  align-items: center;
+  padding: 3em;
 }
 .content__about__img img {
-  height: 300px;
+  height: 600px;
 }
 .content__skills, .content__projects, .content__contact {
   justify-content: center;
   align-items: center;
 }
-
 body {
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
