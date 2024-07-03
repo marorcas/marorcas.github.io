@@ -139,6 +139,11 @@
   justify-content: center;
   align-items: center;
 }
+.content__projects__container {
+  display: flex;
+  overscroll-behavior: contain;
+  scroll-snap-type: x;
+}
 
 body {
   margin: 0;

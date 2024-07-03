@@ -112,5 +112,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        &__container {
+            display: flex;
+            overscroll-behavior: contain;
+            scroll-snap-type: x;
+            
+        }
     }
 }
