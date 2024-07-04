@@ -68,8 +68,8 @@
 
 .content {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .content__about, .content__skills, .content__projects, .content__contact {
   height: 100vh;
@@ -105,44 +105,34 @@
     height: 500px;
   }
 }
-.content__skills, .content__contact {
+.content__skills, .content__projects, .content__contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.content__skills__container, .content__contact__container {
+.content__skills__container, .content__projects__container, .content__contact__container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
-.content__skills__icon, .content__contact__icon {
+.content__skills__icon, .content__projects__icon, .content__contact__icon {
   display: flex;
   padding: 0;
   margin: 0.5em;
 }
-.content__skills__icon:hover, .content__contact__icon:hover {
+.content__skills__icon:hover, .content__projects__icon:hover, .content__contact__icon:hover {
   background-color: #40403A;
 }
-.content__skills__img, .content__contact__img {
+.content__skills__img, .content__projects__img, .content__contact__img {
   height: 50px;
   width: 50px;
   border: 1px solid #252422;
   background-color: #ffffff;
   padding: 1em;
 }
-.content__skills__img:hover, .content__contact__img:hover {
+.content__skills__img:hover, .content__projects__img:hover, .content__contact__img:hover {
   filter: invert(100%);
-}
-.content__projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content__projects__container {
-  display: flex;
-  overscroll-behavior: contain;
-  scroll-snap-type: x;
 }
 
 body {
