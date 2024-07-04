@@ -74,7 +74,7 @@
         }
     }
 
-    &__skills, &__contact {
+    &__skills, &__projects, &__contact {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -107,17 +107,50 @@
         }
     }
 
-    &__projects {
+    // &__projects {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     &__container {
+    //         display: flex;
+    //         overscroll-behavior: contain;
+    //         scroll-snap-type: x;
+            
+    //     }
+    // }
+}
+
+.content__projects__modal {
+    display: none;
+    // display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 70%;
+    position: absolute;
+    padding: 2em;
+
+    &__info {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 2em;
+        background-color: v.$dark-color;
+        color: v.$white-color;
 
-        &__container {
-            display: flex;
-            overscroll-behavior: contain;
-            scroll-snap-type: x;
-            
+        a {
+            color: v.$white-color;
         }
+
+        #closeProject {
+            margin: 2em;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
     }
 }

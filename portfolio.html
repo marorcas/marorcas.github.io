@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Maria | Portfolio</title>
         <link rel="stylesheet" href="./css/style.css">
-        <script src="./js/script.js" defer></script>
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <header>
@@ -82,45 +82,62 @@
                     <h1 class="content__heading">Projects</h1>
 
                     <div class="content__projects__container">
-                        <div class="projects__card" id="fake-os">
-                            <div class="projects__card__info">
-                                <h2>Fake OS</h2>
-                                <p>Description</p>
-                            </div>
-                            <img/>
+                        <div class="content__projects__icon" id="fakeOs">
+                            <img 
+                                class="content__projects__img" 
+                                title="Fake OS"
+                                src="./assets/node_modules/bootstrap-icons/icons/1-square.svg"
+                            />
                         </div>
 
-                        <div class="projects__card" id="morse-translator">
-                            <div class="projects__card__info">
-                                <h2>Morse Translator</h2>
-                                <p>Description</p>
-                            </div>
-                            <img/>
+                        <div class="content__projects__icon" id="morseTranslator">
+                            <img 
+                                class="content__projects__img" 
+                                title="Morse Translator"
+                                src="./assets/node_modules/bootstrap-icons/icons/2-square.svg"
+                            />
+                        </div>
+                        
+                        <div class="content__projects__icon" id="reactEshop">
+                            <img 
+                                class="content__projects__img" 
+                                title="React E-shop"
+                                src="./assets/node_modules/bootstrap-icons/icons/3-square.svg"
+                            />
+                        </div>
+                        
+                        <div class="content__projects__icon" id="minesweeper">
+                            <img 
+                                class="content__projects__img" 
+                                title="Minesweeper"
+                                src="./assets/node_modules/bootstrap-icons/icons/4-square.svg"
+                            />
                         </div>
 
-                        <div class="projects__card" id="e-shop">
-                            <div class="projects__card__info">
-                                <h2>React E-shop</h2>
-                                <p>Description</p>
-                            </div>
-                            <img/>
+                        <div class="content__projects__icon" id="toDoApp">
+                            <img 
+                                class="content__projects__img" 
+                                title="To Do App"
+                                src="./assets/node_modules/bootstrap-icons/icons/5-square.svg"
+                            />
                         </div>
+                    </div>
 
-                        <div class="projects__card" id="minesweeper">
-                            <div class="projects__card__info">
-                                <h2>Minesweeper</h2>
-                                <p>Description</p>
+                    <div class="content__projects__modal" id="projectModal">
+                        <div class="content__projects__modal__info">
+                            <h1 class="content__heading">Project Title</h1>
+                            <p class="content__para">Project description</p>
+                            <div>
+                                <a href="" target="_blank">Github</a>
+                                <a href="" target="_blank">Live</a>
                             </div>
-                            <img/>
+                            <button id="closeProject">Close</button>
                         </div>
-
-                        <div class="projects__card" id="cli">
-                            <div class="projects__card__info">
-                                <h2>Java CLI</h2>
-                                <p>Description</p>
-                            </div>
-                            <img/>
-                        </div>
+    
+                        <img 
+                            class="content__projects__modal__img"
+                            src="./assets/placeholder.jpg" 
+                        />
                     </div>
                 </div>
         
