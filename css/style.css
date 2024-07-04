@@ -110,6 +110,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .content__skills__container, .content__projects__container, .content__contact__container {
   display: flex;
@@ -133,6 +134,34 @@
 }
 .content__skills__img:hover, .content__projects__img:hover, .content__contact__img:hover {
   filter: invert(100%);
+}
+
+.content__projects__modal {
+  display: none;
+  justify-content: center;
+  height: 50%;
+  width: 70%;
+  position: absolute;
+  padding: 2em;
+}
+.content__projects__modal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  background-color: #252422;
+  color: #ffffff;
+}
+.content__projects__modal__info a {
+  color: #ffffff;
+}
+.content__projects__modal__info #closeProject {
+  margin: 2em;
+}
+.content__projects__modal__img {
+  display: flex;
+  justify-content: center;
 }
 
 body {
