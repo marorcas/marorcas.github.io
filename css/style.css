@@ -12,8 +12,12 @@
 .cover__btn {
   padding: 1em 2em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: 1px solid #252422;
-  background-color: #ffffff;
+  color: transparent;
+  border: 1px solid transparent; /* Initially transparent */
+  background-color: transparent; /* Initially transparent */
+  animation: modalButtonFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation-fill-mode: forwards;
+  transition: all 0.3s ease;
 }
 .cover__btn:hover {
   background-color: #252422;
@@ -24,7 +28,7 @@
 .cover__btn-container {
   margin: 2em;
 }
-.cover__container {
+.cover__modal {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -32,15 +36,50 @@
   text-align: center;
   margin: auto;
   padding: 0.5em 3em;
-  background-color: rgba(37, 36, 34, 0.5);
-  color: #ffffff;
+  background-color: transparent;
+  animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-@media screen and (max-width: 1000px) {
-  .cover__container {
-    margin: none;
-  }
+.cover__heading, .cover__subheading {
+  color: #ffffff;
+  opacity: 0;
+  position: relative;
+  animation: modalTextFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
+@keyframes modalFadeIn {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(37, 36, 34, 0.5);
+  }
+}
+@keyframes modalTextFadeIn {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes modalButtonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    color: transparent;
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: #252422;
+    border: 1px solid #252422;
+    background-color: #ffffff;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-between;
