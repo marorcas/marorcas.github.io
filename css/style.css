@@ -16,17 +16,16 @@
   border: 1px solid transparent; /* Initially transparent */
   background-color: transparent; /* Initially transparent */
   animation: modalButtonFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  animation-fill-mode: forwards;
   transition: all 0.3s ease;
 }
 .cover__btn:hover {
-  background-color: #252422;
-  border: 1px solid #ffffff;
-  color: #ffffff;
   cursor: pointer;
 }
 .cover__btn-container {
   margin: 2em;
+}
+.cover__btn-container:hover {
+  transform: scale(1.1);
 }
 .cover__modal {
   transform: scale(1);
@@ -45,11 +44,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 .cover__modal-svg rect {
-  stroke: rgba(37, 36, 34, 0.5);
+  fill: none;
+  stroke: #252422;
+  stroke-opacity: 0.2;
   stroke-width: 2px;
-  animation: sketchIn 0.5s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: sketchIn 2s forwards;
 }
 .cover__heading, .cover__subheading {
   color: #ffffff;
@@ -60,8 +64,7 @@
 
 @keyframes sketchIn {
   0% {
-    stroke-dasharray: 778; /* Adjust based on your SVG size */
-    stroke-dashoffset: 778; /* Adjust based on your SVG size */
+    stroke-dashoffset: 2000; /* Match stroke-dasharray value */
   }
   100% {
     stroke-dashoffset: 0;
@@ -149,13 +152,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 1em 3em;
 }
 .content__about__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 0 3em;
 }
 .content__about__img img {
   height: 600px;

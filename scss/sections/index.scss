@@ -11,11 +11,6 @@
     background-image: url(../../assets/cover.jpg);
     background-size: cover;
     background-position: center;
-    
-
-    // @include q.mobile {
-    //     background-image: url(../../assets/mobile-index.jpeg);
-    // }
 
     &__btn {
         padding: 1em 2em;
@@ -26,16 +21,21 @@
         border: 1px solid transparent; /* Initially transparent */
         background-color: transparent; /* Initially transparent */
         animation: modalButtonFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        animation-fill-mode: forwards;
         transition: all 0.3s ease;
 
         &:hover {
-            @include m.link-hover;
+            // @include m.link-hover;
+            // transform: scale(1.1);
+            cursor: pointer;
         }
     }
 
     &__btn-container {
         margin: 2em;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__modal {
@@ -63,11 +63,16 @@
             position: absolute;
             top: 0;
             left: 0;
+            pointer-events: none;
             
             rect {
-                stroke: rgb(v.$dark-color, 0.5);
+                fill: none;
+                stroke: v.$dark-color;
+                stroke-opacity: 0.2;
                 stroke-width: 2px;
-                animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+                animation: sketchIn 2s forwards;
             }
         }
     }
@@ -82,8 +87,7 @@
 
 @keyframes sketchIn {
 	0% {
-        stroke-dasharray: 778; /* Adjust based on your SVG size */
-        stroke-dashoffset: 778; /* Adjust based on your SVG size */
+        stroke-dashoffset: 2000; /* Match stroke-dasharray value */
     }
     100% {
         stroke-dashoffset: 0;
