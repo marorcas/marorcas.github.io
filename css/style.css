@@ -29,15 +29,27 @@
   margin: 2em;
 }
 .cover__modal {
+  transform: scale(1);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  position: relative;
   align-items: center;
   text-align: center;
   margin: auto;
   padding: 0.5em 3em;
   background-color: transparent;
   animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.cover__modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cover__modal-svg rect {
+  stroke: rgba(37, 36, 34, 0.5);
+  stroke-width: 2px;
+  animation: sketchIn 0.5s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .cover__heading, .cover__subheading {
   color: #ffffff;
@@ -46,6 +58,15 @@
   animation: modalTextFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
+@keyframes sketchIn {
+  0% {
+    stroke-dasharray: 778; /* Adjust based on your SVG size */
+    stroke-dashoffset: 778; /* Adjust based on your SVG size */
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 @keyframes modalFadeIn {
   0% {
     background-color: transparent;

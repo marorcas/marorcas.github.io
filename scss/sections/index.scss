@@ -39,9 +39,11 @@
     }
 
     &__modal {
+        transform: scale(1);
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        position: relative;
         align-items: center;
         text-align: center;
         margin: auto;
@@ -56,6 +58,18 @@
         //     border-image: linear-gradient(90deg, v.$dark-color, v.$dark-color) 1; /* Black border for the sketch effect */
         //     animation: sketchIn 2s ease-out forwards; /* Animation */
         // }
+
+        &-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            rect {
+                stroke: rgb(v.$dark-color, 0.5);
+                stroke-width: 2px;
+                animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            }
+        }
     }
 
     &__heading, &__subheading {
@@ -66,14 +80,15 @@
     }
 }
 
-// @keyframes sketchIn {
-// 	0% {
-// 		stroke-dashoffset: 778;
-// 	}
-// 	100% {
-// 		stroke-dashoffset: 0;
-// 	}
-// }
+@keyframes sketchIn {
+	0% {
+        stroke-dasharray: 778; /* Adjust based on your SVG size */
+        stroke-dashoffset: 778; /* Adjust based on your SVG size */
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 
 @keyframes modalFadeIn {
     0% {
