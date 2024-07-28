@@ -18,7 +18,7 @@
   animation: modalButtonFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   transition: all 0.3s ease;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1000px) {
   .cover__btn:hover {
     cursor: pointer;
   }
@@ -29,7 +29,7 @@
 .cover__btn-container:active {
   transform: scale(1.1);
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1000px) {
   .cover__btn-container:hover {
     transform: scale(1.1);
   }
