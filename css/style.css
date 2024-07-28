@@ -18,14 +18,21 @@
   animation: modalButtonFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   transition: all 0.3s ease;
 }
-.cover__btn:hover {
-  cursor: pointer;
+@media screen and (min-width: 1366px) {
+  .cover__btn:hover {
+    cursor: pointer;
+  }
 }
 .cover__btn-container {
   margin: 2em;
 }
-.cover__btn-container:hover {
+.cover__btn-container:active {
   transform: scale(1.1);
+}
+@media screen and (min-width: 1366px) {
+  .cover__btn-container:hover {
+    transform: scale(1.1);
+  }
 }
 .cover__modal {
   transform: scale(1);
@@ -36,9 +43,14 @@
   align-items: center;
   text-align: center;
   margin: auto;
-  padding: 0.5em 3em;
+  padding: 0.5em 1.5em;
   background-color: transparent;
   animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@media screen and (min-width: 400px) {
+  .cover__modal {
+    padding: 0.5em 3em;
+  }
 }
 .cover__modal-svg {
   position: absolute;
@@ -139,10 +151,13 @@
   width: 100%;
   display: flex;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 390px) {
   .content__about, .content__skills, .content__projects, .content__contact {
     flex-wrap: wrap;
   }
+}
+.content__heading {
+  text-align: center;
 }
 .content__about {
   justify-content: space-around;
@@ -151,7 +166,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 1em 3em;
 }
 .content__about__img {
@@ -163,7 +177,7 @@
 .content__about__img img {
   height: 600px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 390px) {
   .content__about__img img {
     height: 500px;
   }
