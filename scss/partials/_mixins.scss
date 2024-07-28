@@ -19,3 +19,11 @@
     text-decoration: none;
     color: v.$black-color;
 }
+
+@mixin hamburger-link-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: v.$black-color;
+}

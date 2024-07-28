@@ -14,3 +14,16 @@ const closeProject = document.getElementById('closeProject');
 closeProject.addEventListener('click', () => {
     projectModal.style.display = 'none';
 });
+
+
+// open and close hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const hamburgerModal = document.querySelector('.hamburger__modal');
+const hamburgerToggle = () => {
+    if (hamburgerModal.style.display === 'flex' || hamburgerModal.style.display === '') {
+        hamburgerModal.style.display = 'none';
+    } else {
+        hamburgerModal.style.display = 'flex';
+    }
+};
+hamburger.addEventListener('click', hamburgerToggle);

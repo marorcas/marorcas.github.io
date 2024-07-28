@@ -6,16 +6,29 @@
     display: flex;
     justify-content: space-between;
     height: 8vh;
-    width: 100%;
+    width: 99.1vw;
     position: fixed;
     background-color: v.$white-color;
 
-    &__logo, &__links {
+    &__logo {
         display: flex;
+    }
+
+    &__links {
+        display: none;
+
+        @include q.desktop {
+            display: flex;
+        }
     }
         
     &__link {
         @include m.navbar-link-style;
+
+        &:active {
+            background-color: v.$dark-color;
+            color: v.$white-color;
+        }
 
         &:hover {
             @include m.link-hover;
@@ -23,18 +36,68 @@
     }
 }
 
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 8vh;
+
+    &:active {
+        background-color: v.$dark-color;
+    }
+
+    &__icon {
+        height: 50%;
+        color: v.$dark-color;
+        position: relative;
+
+        &:active {
+            filter: invert(100%);
+        }
+    }
+
+    &__link {
+        @include m.hamburger-link-style;
+
+        height: inherit;
+        width: inherit;
+        color: v.$white-color;
+
+        &:active {
+            background-color: v.$white-color;
+            color: v.$black-color;
+        }
+    }
+
+    &__modal {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        height: 20vh;
+        width: 30vw;
+        background-color: v.$dark-color;
+    }
+
+    @include q.desktop {
+        display: none;
+    }
+}
+
 .content {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
 
     &__about, &__skills, &__projects, &__contact {
         @include m.full-screen;
         display: flex;
-
-        @include q.mobile {
-            flex-wrap: wrap;
-        }
     }
 
     &__heading {
@@ -54,17 +117,14 @@
 
     &__about {
         justify-content: space-around;
+        flex-direction: column;
 
         &__info {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // align-items: center;
-            padding: 1em 3em;
-
-            // @include q.mobile {
-            //     padding: 3em;
-            // }
+            align-items: center;
+            padding: 0 3em;
         }
         
 
@@ -72,21 +132,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // height: 600px;
             padding: 0 3em;
-            
-            // @include q.mobile {
-            //     height: 500px;
-            // }
             
 
             img {
-                height: 600px;
+                height: 300px;
 
-                @include q.mobile {
+                @include q.tablet {
                     height: 500px;
                 }
+
+                @include q.desktop {
+                    height: 600px;
+                }
             }
+        }
+
+        @include q.desktop {
+            flex-direction: row;
         }
     }
 
@@ -127,7 +190,6 @@
 
 .content__projects__modal {
     display: none;
-    // display: flex;
     justify-content: center;
     height: 50%;
     width: 70%;
