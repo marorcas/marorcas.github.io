@@ -185,8 +185,7 @@
   color: #ffffff;
 }
 .hamburger__link:active {
-  background-color: #ffffff;
-  color: black;
+  transform: scale(1.2);
 }
 .hamburger__modal {
   display: none;
@@ -195,9 +194,9 @@
   align-items: center;
   position: fixed;
   top: 8vh;
-  right: 0;
-  height: 20vh;
-  width: 30vw;
+  left: 0;
+  height: 100vh;
+  width: 100%;
   background-color: #252422;
 }
 @media screen and (min-width: 1000px) {

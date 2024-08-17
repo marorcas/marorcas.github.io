@@ -68,8 +68,9 @@
         color: v.$white-color;
 
         &:active {
-            background-color: v.$white-color;
-            color: v.$black-color;
+            // background-color: v.$white-color;
+            // color: v.$black-color;
+            transform: scale(1.2);
         }
     }
 
@@ -80,9 +81,9 @@
         align-items: center;
         position: fixed;
         top: 8vh;
-        right: 0;
-        height: 20vh;
-        width: 30vw;
+        left: 0;
+        height: 100vh;
+        width: 100%;
         background-color: v.$dark-color;
     }
 
