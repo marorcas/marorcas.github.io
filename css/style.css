@@ -122,6 +122,7 @@
   height: 8vh;
   width: 99.1vw;
   position: fixed;
+  z-index: 1;
   background-color: #ffffff;
 }
 .navbar__logo {
@@ -140,16 +141,13 @@
   align-items: center;
   padding: 0 2em;
   text-decoration: none;
-  color: black;
+  color: rgba(37, 36, 34, 0.5);
 }
 .navbar__link:active {
-  background-color: #252422;
-  color: #ffffff;
+  color: black;
 }
 .navbar__link:hover {
-  background-color: #252422;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  color: black;
   cursor: pointer;
 }
 
@@ -209,108 +207,101 @@
   display: flex;
   flex-direction: column;
 }
-.content__about, .content__skills, .content__projects, .content__contact {
+
+.about, .skills, .projects, .contact {
   height: 100vh;
   width: 100%;
   display: flex;
-}
-.content__heading {
-  text-align: center;
-}
-.content__para {
-  padding-top: 5em;
-}
-.content__about {
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.content__about__info {
+
+.about__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 3em;
 }
-.content__about__img {
+@media screen and (min-width: 1000px) {
+  .about__info {
+    width: 60%;
+  }
+}
+.about__para {
+  max-width: 85%;
+}
+.about__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 3em;
 }
-.content__about__img img {
+@media screen and (min-width: 1000px) {
+  .about__img {
+    width: 40%;
+  }
+}
+.about__img img {
   height: 300px;
 }
 @media screen and (min-width: 400px) {
-  .content__about__img img {
+  .about__img img {
     height: 400px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .content__about__img img {
+  .about__img img {
     height: 500px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .content__about {
+  .about {
     flex-direction: row;
   }
 }
-.content__skills, .content__projects, .content__contact {
+
+.skills__icon, .contact__icon {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.content__skills__container, .content__projects__container, .content__contact__container {
-  display: flex;
-  justify-content: space-around;
-}
-.content__skills__icon, .content__projects__icon, .content__contact__icon {
-  display: flex;
-  padding: 0;
-  margin: 0.5em;
-}
-.content__skills__icon:hover, .content__projects__icon:hover, .content__contact__icon:hover {
-  background-color: #40403A;
+.skills__icon:hover, .contact__icon:hover {
   cursor: pointer;
 }
-.content__skills__img, .content__projects__img, .content__contact__img {
+
+.skills__img, .contact__img {
   height: 50px;
   width: 50px;
   border: 1px solid #252422;
   background-color: #ffffff;
   padding: 1em;
 }
-.content__skills__img:hover, .content__projects__img:hover, .content__contact__img:hover {
+.skills__img:hover, .contact__img:hover {
   filter: invert(100%);
 }
 
-.content__projects__modal {
-  display: none;
-  justify-content: center;
-  height: 50%;
-  width: 70%;
-  position: absolute;
-  padding: 2em;
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 350px;
+  column-gap: 0.1em;
+  row-gap: 0.3em;
 }
-.content__projects__modal__info {
+
+.contact {
+  position: relative;
+}
+.contact__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
-  background-color: #252422;
-  color: #ffffff;
+  gap: 1em;
 }
-.content__projects__modal__info a {
-  color: #ffffff;
-}
-.content__projects__modal__info #closeProject {
-  margin: 2em;
-}
-.content__projects__modal__img {
+
+footer {
   display: flex;
-  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: rgba(37, 36, 34, 0.5);
 }
 
 body {

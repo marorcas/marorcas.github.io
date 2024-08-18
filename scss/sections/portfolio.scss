@@ -8,6 +8,7 @@
     height: 8vh;
     width: 99.1vw;
     position: fixed;
+    z-index: 1;
     background-color: v.$white-color;
 
     &__logo {
@@ -26,12 +27,11 @@
         @include m.navbar-link-style;
 
         &:active {
-            background-color: v.$dark-color;
-            color: v.$white-color;
+            color: v.$black-color;
         }
 
         &:hover {
-            @include m.link-hover;
+            @include m.navbar-link-hover;
         }
     }
 }
@@ -95,144 +95,103 @@
 .content {
     display: flex;
     flex-direction: column;
-
-    &__about, &__skills, &__projects, &__contact {
-        @include m.full-screen;
-        display: flex;
-    }
-
-    &__heading {
-        text-align: center;
-    }
-
-    &__para {
-        padding-top: 5em;
-    }
-
-    // trying to do typing effect
-    // &__para-text {
-    //     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    //     border-right: .15em solid orange; /* The typwriter cursor */
-    //     white-space: nowrap; /* Keeps the content on a single line */
-    //     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    //     animation: 
-    //         typing 3.5s steps(40, end),
-    //         blink-caret .75s step-end infinite;
-    // }
-
-    &__about {
-        justify-content: space-around;
-        flex-direction: column;
-
-        &__info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 3em;
-        }
-        
-
-        &__img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 3em;
-            
-
-            img {
-                height: 300px;
-
-                @include q.tablet {
-                    height: 400px;
-                }
-
-                @include q.desktop {
-                    height: 500px;
-                }
-            }
-        }
-
-        @include q.desktop {
-            flex-direction: row;
-        }
-    }
-
-    &__skills, &__projects, &__contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        &__container {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        &__icon {
-            display: flex;
-            padding: 0;
-            margin: 0.5em;
-            &:hover {
-                background-color: v.$medium-color;
-                cursor: pointer;
-            }
-        }
-
-        &__img {
-            height: 50px;
-            width: 50px;
-            border: 1px solid v.$dark-color;
-            background-color: v.$white-color;
-            padding: 1em;
-
-            &:hover {
-                filter: invert(100%);
-            }
-        }
-    }
 }
 
-.content__projects__modal {
-    display: none;
+.about, .skills, .projects, .contact {
+    @include m.full-screen;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 50%;
-    width: 70%;
-    position: absolute;
-    padding: 2em;
+    align-items: center;
+}
 
+.about {
     &__info {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2em;
-        background-color: v.$dark-color;
-        color: v.$white-color;
 
-        a {
-            color: v.$white-color;
+        @include q.desktop {
+            width: 60%;
         }
+    }
 
-        #closeProject {
-            margin: 2em;
-        }
+    &__para {
+        max-width: 85%;
     }
 
     &__img {
         display: flex;
         justify-content: center;
+        align-items: center;
+        
+        @include q.desktop {
+            width: 40%;
+        }
+
+        img {
+            height: 300px;
+            
+            @include q.tablet {
+                height: 400px;
+            }
+            
+            @include q.desktop {
+                height: 500px;
+            }
+        }
+    }
+
+    @include q.desktop {
+        flex-direction: row;
     }
 }
 
-// trying to do typing effect
-// @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-// }
-  
-//   /* The typewriter cursor effect */
-// @keyframes blink-caret {
-//     from, to { border-color: transparent }
-//     50% { border-color: orange; }
-// }
+.skills__icon, .contact__icon {
+    display: flex;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.skills__img, .contact__img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid v.$dark-color;
+    background-color: v.$white-color;
+    padding: 1em;
+    
+    &:hover {
+        filter: invert(100%);
+    }
+}
+
+.skills {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 350px;
+        column-gap: 0.1em;
+        row-gap: 0.3em;
+    }
+}
+
+.contact {
+    position: relative;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: v.$dark-color-seethrough;
+}

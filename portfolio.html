@@ -9,7 +9,9 @@
     </head>
     <body>
         <header>
+
             <nav class="navbar">
+
                 <div class="navbar__logo">
                     <a class="navbar__link" href="./index.html">MARORCAS</a>
                 </div>
@@ -40,197 +42,136 @@
 
                     <a class="navbar__link" href="#contact">CONTACT</a>
                 </div>
+
             </nav>
+
         </header>
 
-        <main>
-            <div class="content">
-                <div class="content__about" id="about">
-                    <div class="content__about__info">
-                        <!-- <h1 class="content__heading">About</h1> -->
-                        <!-- <div class="content__para-container">
-                            <p class="content__para-text">
-                                Welcome to my site. I'm Maria, an aspiring software engineer based in Sydney. Have a look through my portfolio to learn more about my skillset and how I could help you solve your tech problems.
-                            </p>
-                        </div> -->
-                        <div class="content__para-container">
-                            <p class="content__para">
-                                Welcome to my site. <br> I'm Maria, an aspiring software engineer based in Sydney. <br> Have a look through my portfolio to learn more about my skillset and how I could help you solve your tech problems.
-                            </p>
-                        </div>
-                    </div>
+        <main class="content">
 
-                    <div class="content__about__img">
-                        <img src="./assets/profile.jpeg" />
-                    </div>
-                    <!-- <img class="content__about__img" src="./assets/profile.jpeg" /> -->
+            <div class="about" id="about">
+                <div class="about__info">
+                    <p class="about__para">
+                        Welcome to my site. <br> I'm Maria, a junior software engineer based in Sydney. <br> Have a look through my portfolio to learn more about my skillset and how I could help you solve your tech problems.
+                    </p>
                 </div>
-        
-                <div class="content__skills" id="skills">
-                    <h1 class="content__heading">Some tools that I work with...</h1>
 
-                    <div class="content__skills__container">
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="Cascading Style Sheets"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-css.svg"
-                            />
-                        </div>
-
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="HyperText Markup Language"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-html.svg"
-                            />
-                        </div>
-
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="Java"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-java.svg"
-                            />
-                        </div>
-                        
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="JavaScript"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-js.svg"
-                            />
-                        </div>
-
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="JavaScript Object Notation"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-json.svg"
-                            />
-                        </div>
-                        
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="Sassy CSS"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-scss.svg"
-                            />
-                        </div>
-
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="Structured Query Language"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-scss.svg"
-                            />
-                        </div>
-
-                        <div class="content__skills__icon">
-                            <img 
-                                class="content__skills__img" 
-                                title="TypeScript"
-                                src="./assets/node_modules/bootstrap-icons/icons/filetype-tsx.svg"
-                            />
-                        </div>
-                    </div>
+                <div class="about__img">
+                    <img src="./assets/profile.jpeg" />
                 </div>
+            </div>
         
-                <div class="content__projects" id="projects">
-                    <h1 class="content__heading">Projects</h1>
+            <div class="skills" id="skills">
+                <p class="skills__para">Some tools that I work with...</p>
 
-                    <div class="content__projects__container">
-                        <div class="content__projects__icon" id="fakeOs">
-                            <img 
-                                class="content__projects__img" 
-                                title="Fake OS"
-                                src="./assets/node_modules/bootstrap-icons/icons/1-square.svg"
-                            />
-                        </div>
-
-                        <div class="content__projects__icon" id="morseTranslator">
-                            <img 
-                                class="content__projects__img" 
-                                title="Morse Translator"
-                                src="./assets/node_modules/bootstrap-icons/icons/2-square.svg"
-                            />
-                        </div>
-                        
-                        <div class="content__projects__icon" id="reactEshop">
-                            <img 
-                                class="content__projects__img" 
-                                title="React E-shop"
-                                src="./assets/node_modules/bootstrap-icons/icons/3-square.svg"
-                            />
-                        </div>
-                        
-                        <div class="content__projects__icon" id="minesweeper">
-                            <img 
-                                class="content__projects__img" 
-                                title="Minesweeper"
-                                src="./assets/node_modules/bootstrap-icons/icons/4-square.svg"
-                            />
-                        </div>
-
-                        <div class="content__projects__icon" id="toDoApp">
-                            <img 
-                                class="content__projects__img" 
-                                title="To Do App"
-                                src="./assets/node_modules/bootstrap-icons/icons/5-square.svg"
-                            />
-                        </div>
-                    </div>
-
-                    <div class="content__projects__modal" id="projectModal">
-                        <div class="content__projects__modal__info">
-                            <h1 class="content__heading">Project Title</h1>
-                            <p class="content__para">Project description</p>
-                            <div>
-                                <a href="" target="_blank">Github</a>
-                                <a href="" target="_blank">Live</a>
-                            </div>
-                            <button id="closeProject">Close</button>
-                        </div>
-    
+                <div class="skills__container">
+                    <div class="skills__icon">
                         <img 
-                            class="content__projects__modal__img"
-                            src="./assets/placeholder.jpg" 
+                            class="skills__img" 
+                            title="Cascading Style Sheets"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-css.svg"
+                        />
+                    </div>
+
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="HyperText Markup Language"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-html.svg"
+                        />
+                    </div>
+
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="Java"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-java.svg"
+                        />
+                    </div>
+                        
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="JavaScript"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-js.svg"
+                        />
+                    </div>
+
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="JavaScript Object Notation"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-json.svg"
+                        />
+                    </div>
+                        
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="Sassy CSS"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-scss.svg"
+                        />
+                    </div>
+
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="Structured Query Language"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-scss.svg"
+                        />
+                    </div>
+
+                    <div class="skills__icon">
+                        <img 
+                            class="skills__img" 
+                            title="TypeScript"
+                            src="./assets/node_modules/bootstrap-icons/icons/filetype-tsx.svg"
                         />
                     </div>
                 </div>
-        
-                <div class="content__contact" id="contact">
-                    <h1 class="content__heading">Contact</h1>
 
-                    <div class="content__contact__container">
-                        <a class="content__contact__icon" href="" target="_blank">
-                            <img 
-                                class="content__contact__img" 
-                                title=""
-                                src="./assets/node_modules/bootstrap-icons/icons/envelope-at.svg"
-                            />
-                        </a>
-
-                        <a class="content__contact__icon" href="https://github.com/marorcas" target="_blank">
-                            <img 
-                                class="content__contact__img" 
-                                title="https://github.com/marorcas"
-                                src="./assets/node_modules/bootstrap-icons/icons/github.svg"
-                            />
-                        </a>
-                        
-                        <a class="content__contact__icon" href="https://www.linkedin.com/in/marorcas/" target="_blank">
-                            <img 
-                                class="content__contact__img" 
-                                title="https://www.linkedin.com/in/marorcas/"
-                                src="./assets/node_modules/bootstrap-icons/icons/linkedin.svg"
-                            />
-                        </a>
-                    </div>
-
-                    <!-- <h3>placeholder@email.com</h3> -->
-                </div>
             </div>
+        
+            <div class="projects" id="projects">
+                <p>Check out some of my projects...</p>
+            </div>
+        
+            <div class="contact" id="contact">
+                <p>Get in touch with me!</p>
+
+                <div class="contact__container">
+                    <a class="contact__icon" href="" target="_blank">
+                        <img 
+                            class="contact__img" 
+                            title="placeholder@email.com"
+                            src="./assets/node_modules/bootstrap-icons/icons/envelope-at.svg"
+                        />
+                    </a>
+                        
+                    <a class="contact__icon" href="https://www.linkedin.com/in/marorcas/" target="_blank">
+                        <img 
+                            class="contact__img" 
+                            title="https://www.linkedin.com/in/marorcas/"
+                            src="./assets/node_modules/bootstrap-icons/icons/linkedin.svg"
+                        />
+                    </a>
+                </div>
+
+                <p>For more projects:</p>
+                
+                <a class="contact__icon" href="https://github.com/marorcas" target="_blank">
+                    <img 
+                        class="contact__img" 
+                        title="https://github.com/marorcas"
+                        src="./assets/node_modules/bootstrap-icons/icons/github.svg"
+                    />
+                </a>
+
+                <footer>
+                    <p>Built with HTML, SCSS & JavaScript &copy; Maria Ortiz Castillo <span id="current-year"></span></p>
+                </footer>
+            </div>
+
         </main>
     </body>
 </html>

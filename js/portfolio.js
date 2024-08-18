@@ -1,4 +1,4 @@
-// document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('current-year').textContent = new Date().getFullYear();
 
 //open and close project modal
 const projects = document.querySelectorAll('.content__projects__icon');
