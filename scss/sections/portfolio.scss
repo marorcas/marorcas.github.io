@@ -105,6 +105,10 @@
         text-align: center;
     }
 
+    &__para {
+        padding-top: 5em;
+    }
+
     // trying to do typing effect
     // &__para-text {
     //     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -140,11 +144,11 @@
                 height: 300px;
 
                 @include q.tablet {
-                    height: 500px;
+                    height: 400px;
                 }
 
                 @include q.desktop {
-                    height: 600px;
+                    height: 500px;
                 }
             }
         }
