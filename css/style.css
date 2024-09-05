@@ -120,7 +120,7 @@
   display: none;
   justify-content: space-between;
   height: 8vh;
-  width: 99.1vw;
+  width: 100vw;
   position: fixed;
   background-color: #ffffff;
 }
@@ -164,7 +164,7 @@
   justify-content: center;
   align-items: center;
   height: 13vh;
-  width: 99.1vw;
+  width: 100vw;
   position: fixed;
   background-color: #ffffff;
 }
@@ -181,7 +181,7 @@
   display: flex;
   justify-content: space-around;
   height: 6vh;
-  width: 99.1vw;
+  width: 100vw;
 }
 .navbar__mobile__link {
   display: flex;
@@ -273,6 +273,12 @@
 }
 .content__skills__img:hover, .content__projects__img:hover, .content__contact__img:hover {
   filter: invert(100%);
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  color: rgba(37, 36, 34, 0.5);
 }
 
 body {

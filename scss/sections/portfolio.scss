@@ -6,7 +6,7 @@
     display: none;
     justify-content: space-between;
     height: 8vh;
-    width: 99.1vw;
+    width: 100vw;
     position: fixed;
     background-color: v.$white-color;
 
@@ -46,7 +46,7 @@
     justify-content: center;
     align-items: center;
     height: 13vh;
-    width: 99.1vw;
+    width: 100vw;
     position: fixed;
     background-color: v.$white-color;
 
@@ -63,7 +63,7 @@
         display: flex;
         justify-content: space-around;
         height: 6vh;
-        width: 99.1vw;
+        width: 100vw;
     }
         
     &__link {
@@ -75,62 +75,6 @@
         }
     }
 }
-
-// .hamburger {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//     padding: 0;
-//     width: 8vh;
-
-//     &:active {
-//         background-color: v.$dark-color;
-//     }
-
-//     &__icon {
-//         height: 50%;
-//         color: v.$dark-color;
-//         position: relative;
-
-//         &:active {
-//             filter: invert(100%);
-//         }
-//     }
-
-//     &__link {
-//         @include m.hamburger-link-style;
-
-//         height: inherit;
-//         width: inherit;
-//         color: v.$white-color;
-
-//         &:active {
-//             // background-color: v.$white-color;
-//             // color: v.$black-color;
-//             transform: scale(1.2);
-//         }
-//     }
-
-//     &__modal {
-//         display: none;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
-//         position: fixed;
-//         top: 8vh;
-//         left: 0;
-//         height: 100vh;
-//         width: 100%;
-//         background-color: v.$dark-color;
-//     }
-
-//     @include q.desktop {
-//         display: none;
-//     }
-// }
 
 .content {
     display: flex;
@@ -222,34 +166,8 @@
     }
 }
 
-// .content__projects__modal {
-//     display: none;
-//     justify-content: center;
-//     height: 50%;
-//     width: 70%;
-//     position: absolute;
-//     padding: 2em;
-
-//     &__info {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         padding: 2em;
-//         background-color: v.$dark-color;
-//         color: v.$white-color;
-
-//         a {
-//             color: v.$white-color;
-//         }
-
-//         #closeProject {
-//             margin: 2em;
-//         }
-//     }
-
-//     &__img {
-//         display: flex;
-//         justify-content: center;
-//     }
-// }
+footer {
+    display: flex;
+    text-align: center;
+    color: v.$dark-color-seethrough;
+}
