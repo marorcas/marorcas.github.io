@@ -20,6 +20,14 @@
     color: v.$black-color;
 }
 
+@mixin navbar-mobile-link-style {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    text-decoration: none;
+    color: v.$black-color;
+}
+
 @mixin hamburger-link-style {
     display: flex;
     align-items: center;

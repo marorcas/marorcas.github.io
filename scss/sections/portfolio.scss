@@ -3,12 +3,16 @@
 @use "../partials/queries" as q;
  
 .navbar {
-    display: flex;
+    display: none;
     justify-content: space-between;
     height: 8vh;
     width: 99.1vw;
     position: fixed;
     background-color: v.$white-color;
+
+    @include q.desktop {
+        display: flex;
+    }
 
     &__logo {
         display: flex;
@@ -36,61 +40,97 @@
     }
 }
 
-.hamburger {
+.navbar__mobile {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 8vh;
-
-    &:active {
-        background-color: v.$dark-color;
-    }
-
-    &__icon {
-        height: 50%;
-        color: v.$dark-color;
-        position: relative;
-
-        &:active {
-            filter: invert(100%);
-        }
-    }
-
-    &__link {
-        @include m.hamburger-link-style;
-
-        height: inherit;
-        width: inherit;
-        color: v.$white-color;
-
-        &:active {
-            // background-color: v.$white-color;
-            // color: v.$black-color;
-            transform: scale(1.2);
-        }
-    }
-
-    &__modal {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        position: fixed;
-        top: 8vh;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        background-color: v.$dark-color;
-    }
+    height: 13vh;
+    width: 99.1vw;
+    position: fixed;
+    background-color: v.$white-color;
 
     @include q.desktop {
         display: none;
     }
+
+    &__logo {
+        display: flex;
+        height: 7vh;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        height: 6vh;
+        width: 99.1vw;
+    }
+        
+    &__link {
+        @include m.navbar-mobile-link-style;
+
+        &:active {
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+    }
 }
+
+// .hamburger {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     padding: 0;
+//     width: 8vh;
+
+//     &:active {
+//         background-color: v.$dark-color;
+//     }
+
+//     &__icon {
+//         height: 50%;
+//         color: v.$dark-color;
+//         position: relative;
+
+//         &:active {
+//             filter: invert(100%);
+//         }
+//     }
+
+//     &__link {
+//         @include m.hamburger-link-style;
+
+//         height: inherit;
+//         width: inherit;
+//         color: v.$white-color;
+
+//         &:active {
+//             // background-color: v.$white-color;
+//             // color: v.$black-color;
+//             transform: scale(1.2);
+//         }
+//     }
+
+//     &__modal {
+//         display: none;
+//         flex-direction: column;
+//         justify-content: space-around;
+//         align-items: center;
+//         position: fixed;
+//         top: 8vh;
+//         left: 0;
+//         height: 100vh;
+//         width: 100%;
+//         background-color: v.$dark-color;
+//     }
+
+//     @include q.desktop {
+//         display: none;
+//     }
+// }
 
 .content {
     display: flex;
@@ -108,17 +148,6 @@
     &__para {
         padding-top: 5em;
     }
-
-    // trying to do typing effect
-    // &__para-text {
-    //     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    //     border-right: .15em solid orange; /* The typwriter cursor */
-    //     white-space: nowrap; /* Keeps the content on a single line */
-    //     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    //     animation: 
-    //         typing 3.5s steps(40, end),
-    //         blink-caret .75s step-end infinite;
-    // }
 
     &__about {
         justify-content: space-around;
@@ -193,46 +222,34 @@
     }
 }
 
-.content__projects__modal {
-    display: none;
-    justify-content: center;
-    height: 50%;
-    width: 70%;
-    position: absolute;
-    padding: 2em;
+// .content__projects__modal {
+//     display: none;
+//     justify-content: center;
+//     height: 50%;
+//     width: 70%;
+//     position: absolute;
+//     padding: 2em;
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2em;
-        background-color: v.$dark-color;
-        color: v.$white-color;
+//     &__info {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 2em;
+//         background-color: v.$dark-color;
+//         color: v.$white-color;
 
-        a {
-            color: v.$white-color;
-        }
+//         a {
+//             color: v.$white-color;
+//         }
 
-        #closeProject {
-            margin: 2em;
-        }
-    }
+//         #closeProject {
+//             margin: 2em;
+//         }
+//     }
 
-    &__img {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-// trying to do typing effect
-// @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-// }
-  
-//   /* The typewriter cursor effect */
-// @keyframes blink-caret {
-//     from, to { border-color: transparent }
-//     50% { border-color: orange; }
+//     &__img {
+//         display: flex;
+//         justify-content: center;
+//     }
 // }
