@@ -201,6 +201,7 @@ footer {
 .carousel__item img {
     width: 100%;
     display: block;
+    border: 1px solid v.$dark-color;
 
     @include q.tablet {
         width: 20%;
@@ -215,7 +216,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: v.$dark-color-seethrough;
     color: white;
     border: none;
     padding: 10px;
