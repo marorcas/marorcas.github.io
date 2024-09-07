@@ -171,3 +171,54 @@ footer {
     text-align: center;
     color: v.$dark-color-seethrough;
 }
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel__wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel__item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center;     /* Center items horizontally */
+    text-align: center;     
+    box-sizing: border-box;
+
+    p {
+        max-width: 75%;
+    }
+}
+
+.carousel__item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel__control--prev {
+    left: 10px;
+}
+
+.carousel__control--next {
+    right: 10px;
+}
