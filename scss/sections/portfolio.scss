@@ -201,6 +201,14 @@ footer {
 .carousel__item img {
     width: 100%;
     display: block;
+
+    @include q.tablet {
+        width: 20%;
+    }
+
+    @include q.desktop {
+        width: 20%;
+    }
 }
 
 .carousel__control {

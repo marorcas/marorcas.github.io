@@ -309,6 +309,16 @@ footer {
   width: 100%;
   display: block;
 }
+@media screen and (min-width: 400px) {
+  .carousel__item img {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .carousel__item img {
+    width: 20%;
+  }
+}
 
 .carousel__control {
   position: absolute;
