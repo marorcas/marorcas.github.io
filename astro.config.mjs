@@ -8,6 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://marorcas.github.io",
-  base: "/portfolio-2026/",
+  site: "https://marorcas.github.io/portfolio-2026/",
 });
