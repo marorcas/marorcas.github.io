@@ -9,30 +9,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # checkout the repo
+      # Start SSH agent and add the private key
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.GH_SSH_KEY }}
+
+      # Checkout the repo using SSH
       - uses: actions/checkout@v4
         with:
-            persist-credentials: false
+          persist-credentials: false
 
-      # setup node js
+      # Setup Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # install dependencies
+      # Install dependencies
       - run: npm ci
 
-      # build astro project
+      # Build Astro project
       - run: npm run build
 
-      # deploy to github pages
+      # Deploy to GitHub Pages via SSH
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-            personal_token: ${{ secrets.GH_PAT }}
-            publish_dir: ./dist
-            publish_branch: gh-pages
-            commit_message: "Deploy portfolio to GitHub Pages"
-            force_orphan: true
-
-
+          remote_url: git@github.com:marorcas/portfolio-2026.git
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          commit_message: "Deploy portfolio to GitHub Pages"
+          force_orphan: true
