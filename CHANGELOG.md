@@ -7,7 +7,7 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 
 ## [Unreleased]
 
-- Notes for things I'm currently working on
+- Home page url has extra '/' --> harmless but will fix later
 
 ---
 
