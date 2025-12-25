@@ -14,6 +14,7 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 ## [2025-12-25] - Initial Setup
 - Created Astro + Tailwind CSS base project
 - Created base pages (base + projects)
+- Added basic navigation
 
 ---
 
