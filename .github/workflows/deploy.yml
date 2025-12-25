@@ -7,14 +7,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      # checkout the repo
       - uses: actions/checkout@v4
+
+      # setup node js
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      # install dependencies
       - run: npm ci
+
+      # build astro project
       - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v4
+
+      # deploy to github pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: ./dist
+
