@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          remote_url: git@github.com:marorcas/portfolio-2026.git
+          deploy_key: ${{ secrets.GH_SSH_KEY }}
           publish_dir: ./dist
           publish_branch: gh-pages
           commit_message: "Deploy portfolio to GitHub Pages"
