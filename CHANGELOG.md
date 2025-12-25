@@ -15,6 +15,8 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 - Created Astro + Tailwind CSS base project
 - Created base pages (base + projects)
 - Added basic navigation
+- Configured Github Pages
+- Created Github Actions workflow
 
 ---
 
