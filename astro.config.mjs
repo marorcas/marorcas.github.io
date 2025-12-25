@@ -9,4 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://marorcas.github.io/portfolio-2026/",
+  base: '/portfolio-2026/',
 });
