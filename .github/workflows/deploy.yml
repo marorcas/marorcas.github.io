@@ -23,7 +23,7 @@ jobs:
       # setup node js
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: 'package.json'
 
       # install dependencies
       - run: npm ci
