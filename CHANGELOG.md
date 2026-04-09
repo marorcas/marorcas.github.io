@@ -20,6 +20,12 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 
 ---
 
+## [2026-04-09] 
+- Deleted unnecessary files
+- Upgraded Astro to latest supported version
+
+---
+
 ## [YYYY-MM-DD] - Update Title
 - Description of what changed
 - Description of new features or fixes
