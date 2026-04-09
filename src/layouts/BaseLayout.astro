@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>My Portfolio</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
 
-    <body class="bg-zinc-900 text-zinc-100">
-        <header class="mb-8">
-            <nav class="flex gap-4 text-sm">
-                <a href={Astro.site} class="hover:underline">Home</a>
-                <a href={Astro.site + '/projects'} class="hover:underline">Projects</a>
-            </nav>
-        </header>
+  <body>
+    <div class="max-w-3xl mx-auto px-6 py-12">
+      <!-- Header / Navigation -->
+      <header class="mb-12">
+        <nav class="flex gap-6 text-sm">
+          <a href={Astro.site} class="hover:underline">Home</a>
+          <a href={Astro.site + '/projects'} class="hover:underline">Projects</a>
+        </nav>
+      </header>
 
+      <!-- Main content -->
+      <main>
+        <slot />
+      </main>
 
-        <main class="max-w-3xl mx-auto p-6">
-            <slot />
-        </main>
-    </body>
+      <!-- Footer -->
+      <footer class="mt-12 text-sm text-zinc-500">
+        © 2026 M
+      </footer>
+    </div>
+  </body>
 </html>
