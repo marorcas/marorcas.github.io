@@ -6,24 +6,20 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
-
-  <body>
-    <div class="max-w-3xl mx-auto px-6 py-12">
-      <!-- Header / Navigation -->
+  <body class="bg-zinc-900 text-zinc-100 min-h-screen">
+    <div class="max-w-3xl mx-auto px-6 py-12 flex flex-col min-h-screen">
       <header class="mb-12">
-        <nav class="flex gap-6 text-sm">
+        <nav class="flex gap-6 text-sm justify-center">
           <a href={Astro.site} class="hover:underline">Home</a>
-          <a href={Astro.site + '/projects'} class="hover:underline">Projects</a>
+          <a href={`${Astro.site}/projects`} class="hover:underline">Projects</a>
         </nav>
       </header>
 
-      <!-- Main content -->
-      <main>
+      <main class="flex-1 text-center">
         <slot />
       </main>
 
-      <!-- Footer -->
-      <footer class="mt-12 text-sm text-zinc-500">
+      <footer class="mt-12 text-sm text-zinc-500 text-center">
         © 2026 M
       </footer>
     </div>

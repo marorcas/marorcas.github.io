@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Global body styles */
 body {
@@ -38,7 +38,7 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Utility spacing */
+/* Container */
 .container {
   max-width: 48rem; /* ~3xl */
   margin-left: auto;
