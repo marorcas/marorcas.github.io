@@ -1,6 +1,6 @@
 # My Portfolio
 
-A personal portfolio website built with **Astro** and **Tailwind CSS**, showcasing my projects, skills, and interests.
+A personal portfolio website built with **Astro** and **CSS**, showcasing my projects, skills, and interests.
 
 ## Features
 
