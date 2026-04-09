@@ -26,6 +26,7 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 - Upgraded node version
 - Added minimal styling
 - Added tailwind config file
+- Decided to simplify styling - no Tailwind for now, just plain CSS as my focus is to have a working portfolio, not styling
 
 ---
 
