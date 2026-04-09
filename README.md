@@ -12,7 +12,7 @@ A personal portfolio website built with **Astro** and **Tailwind CSS**, showcasi
 ## Tech Stack
 
 - [Astro](https://astro.build/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- CSS
 - GitHub Pages for deployment
 
 ## License
