@@ -10,19 +10,21 @@ import { projects } from "../data/projects";
   <section class="projects">
     {projects.map((project) => (
       <div class="project">
-        <div class="project-id">[{project.id}]</div>
-        <h2 class="project-title">{project.title}</h2>
-        <p class="project-meta">{project.description}</p>
+        <div class="project-header">
+          <span class="project-id">[{project.id}]</span>
+          <h2 class="project-title">{project.title}</h2>
+        </div>
+        <p class="project-meta">Description: {project.description}</p>
         <div class="project-stack">
+          <p>Stack: </p>
           {project.stack.map((item) => (
-            <span class="stack-tag">{item}</span>
+            <span class="stack-tag">[{item}]</span>
           ))}
         </div>
         <div class="project-links">
-          {project.demo && <a href={project.demo} class="cta">demo →</a>}
-          {project.code && <a href={project.code} class="cta">code →</a>}
+          {project.link && <a href={project.link} class="cta">Link →</a>}
         </div>
       </div>
-    ))}
+          ))}
   </section>
 </BaseLayout>

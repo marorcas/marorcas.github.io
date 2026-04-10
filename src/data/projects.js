@@ -1,26 +1,23 @@
 export const projects = [
   {
     id: "001",
-    title: "project 1",
-    description: "description 1",
-    stack: ["tool 1", "tool 2"],
-    demo: "#",
-    code: "#"
+    title: "Project 1",
+    description: "Description 1",
+    stack: ["Tool 1", "Tool 2"],
+    link: "#",
   },
   {
     id: "002",
-    title: "project 2",
-    description: "description 2",
-    stack: ["tool 1", "tool 2"],
-    demo: "#",
-    code: "#"
+    title: "Project 2",
+    description: "Description 2",
+    stack: ["Tool 1", "Tool 2"],
+    link: "#",
   },
     {
     id: "003",
-    title: "project 3",
-    description: "description 3",
-    stack: ["tool 1", "tool 2"],
-    demo: "#",
-    code: "#"
+    title: "Project 3",
+    description: "Description 3",
+    stack: ["Tool 1", "Tool 2"],
+    link: "#",
   }
 ];

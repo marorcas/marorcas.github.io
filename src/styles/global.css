@@ -82,11 +82,11 @@ footer {
 /* Main content */
 main {
   flex: 1;
-  max-width: 700px;
+  max-width: 500px;
   width: 90%;
   margin: 0 auto;
   padding: 3.5rem 0 2rem;
-  text-align: center
+  text-align: center;
 }
 
 /* Home page */
@@ -115,8 +115,8 @@ main {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: transparent;
-  border: 2px solid rgba(244, 244, 245, 0.35);
+  background: #22c55e;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   flex-shrink: 0;
 }
 
@@ -152,6 +152,7 @@ h1 {
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.15s, border-color 0.15s;
+  font-family: monospace
 }
 
 .cta:hover {
@@ -184,26 +185,42 @@ h1 {
 .project {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+/* Project header (id + title inline) */
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Project ID */
 .project-id {
   font-family: monospace;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
 }
 
 /* Project title */
 .project-title {
-  margin-bottom: 0.5rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  color: rgba(244, 244, 245, 0.9);
 }
 
 /* Meta info */
 .project-meta {
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-family: monospace
 }
 
 /* Stack tags */
@@ -212,16 +229,13 @@ h1 {
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 1.25rem;
-  justify-content: center;
+  justify-content: flex-start;
+  font-family: monospace;
+  font-size: 0.9rem;
 }
 
 .stack-tag {
-  font-size: 11px;
-  font-family: monospace;
   color: rgba(244, 244, 245, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2px 8px;
-  border-radius: 4px;
   letter-spacing: 0.03em;
 }
 
@@ -229,7 +243,7 @@ h1 {
 .project-links {
   display: flex;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* Lists */
