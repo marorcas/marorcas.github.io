@@ -7,8 +7,8 @@
 
 /* Body */
 body {
-  background-color: #090909;  /* dark background */
-  color: #f4f4f5;             /* light text */
+  background-color: #090909;
+  color: #f4f4f5;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
@@ -46,6 +46,39 @@ main {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+}
+
+/* Projects container (spacing between entries) */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Each project block (system / log entry feel) */
+.project {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Project ID (log-style metadata) */
+.project-id {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+/* Project title */
+.project-title {
+  margin-bottom: 0.5rem;
+}
+
+/* Meta info (stack + description) */
+.project-meta {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
 }
 
 /* Lists */
