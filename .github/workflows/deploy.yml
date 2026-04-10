@@ -4,39 +4,60 @@ on:
   push:
     branches: [main]
 
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # start ssh agent and add the private key
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.9.0
+      # Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          ssh-private-key: ${{ secrets.GH_SSH_KEY }}
+          node-version-file: package.json
+          cache: npm
 
-      # checkout repo using ssh
-      - uses: actions/checkout@v4
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Build Astro
+      - name: Build site
+        run: npm run build
+
+      # Setup Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload build output
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          persist-credentials: false
+          path: dist
 
-      # setup node js
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: 'package.json'
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
-      # install dependencies
-      - run: npm ci
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      # build astro project
-      - run: npm run build
-
-      # deploy to github pages via ssh
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.GH_SSH_KEY }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          commit_message: "Deploy portfolio to GitHub Pages"
-          force_orphan: true
+        id: deployment
+        uses: actions/deploy-pages@v4
