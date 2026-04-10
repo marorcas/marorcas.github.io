@@ -32,9 +32,15 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 ---
 
 ## [2026-04-10]
+- Created a kanban board to keep track of issues
 - Created basic layout and styling for projects page 
 - Enabled manual runs for deploy workflow 
 - Updated workflow to use github actions for deployment
+
+---
+
+## [2026-04-11]
+- Implemented dark/light mode feature
 
 ---
 
