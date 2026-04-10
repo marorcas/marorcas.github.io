@@ -2,27 +2,25 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { projects } from "../data/projects";
 ---
-
 <BaseLayout>
-  <h1>Projects</h1>
-
+  <div class="page-header">
+    <h1>GET /projects</h1>
+    <p class="page-subtitle">200 OK · {projects.length} entries</p>
+  </div>
   <section class="projects">
     {projects.map((project) => (
       <div class="project">
-        <div class="project-id">[ID: {project.id}]</div>
+        <div class="project-id">[{project.id}]</div>
         <h2 class="project-title">{project.title}</h2>
-
-        <p class="project-meta">
-          <strong>Description:</strong> {project.description}<br />
-          <strong>Stack:</strong> {project.stack.join(", ")}<br />
-        </p>
-
-        <div class="project-links">
-          <a href={project.demo}>Demo</a>
+        <p class="project-meta">{project.description}</p>
+        <div class="project-stack">
+          {project.stack.map((item) => (
+            <span class="stack-tag">{item}</span>
+          ))}
         </div>
-
         <div class="project-links">
-          <a href={project.code}>Code</a>
+          {project.demo && <a href={project.demo} class="cta">demo →</a>}
+          {project.code && <a href={project.code} class="cta">code →</a>}
         </div>
       </div>
     ))}

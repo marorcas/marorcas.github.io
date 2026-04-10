@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
 <BaseLayout>
-  <h1>Hi, I’m M</h1>
-  <p>Learning by building. Projects and experiments live here.</p>
-  <a href="/projects">View my projects →</a>
+  <div class="status">
+    <span class="status-dot"></span>
+    exploring · building · learning
+  </div>
+  <h1>Hi, I'm M</h1>
+  <p class="tagline">Learning by building. Projects and experiments live here.</p>
+  <p class="domains">automation · cloud systems · containers · operations</p>
+  <a href="/projects" class="cta">View my projects →</a>
 </BaseLayout>

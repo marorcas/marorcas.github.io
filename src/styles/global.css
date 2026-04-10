@@ -21,6 +21,7 @@ a {
   color: #d4d4d4;
   text-decoration: underline;
   text-underline-offset: 4px;
+  transition: color 0.15s;
 }
 
 a:hover {
@@ -33,10 +34,49 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Header & Footer */
-header, footer {
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.monogram {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+  color: #f4f4f5;
+  text-decoration: none;
+}
+
+.monogram:hover {
+  color: #f4f4f5;
+}
+
+nav a {
+  font-size: 13px;
+  color: rgba(244, 244, 245, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: #f4f4f5;
+}
+
+/* Footer */
+footer {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  color: rgba(244, 244, 245, 0.2);
+  font-family: monospace;
+  letter-spacing: 0.04em;
 }
 
 /* Main content */
@@ -45,23 +85,108 @@ main {
   max-width: 700px;
   width: 90%;
   margin: 0 auto;
+  padding: 3.5rem 0 2rem;
+  text-align: center
+}
+
+/* Home page */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+}
+
+/* Status indicator */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-family: monospace;
+  color: rgba(244, 244, 245, 0.45);
+  letter-spacing: 0.03em;
+  margin-bottom: 2rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgba(244, 244, 245, 0.35);
+  flex-shrink: 0;
+}
+
+/* Homepage typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: rgba(244, 244, 245, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.domains {
+  font-size: 11.5px;
+  font-family: monospace;
+  color: rgba(244, 244, 245, 0.28);
+  letter-spacing: 0.05em;
+  margin-bottom: 2.25rem;
+}
+
+/* CTA button */
+.cta {
+  display: inline-block;
+  font-size: 13px;
+  color: rgba(244, 244, 245, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.cta:hover {
+  color: #f4f4f5;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Page header (projects and any future pages) */
+.page-header {
+  margin-bottom: 3rem;
   text-align: center;
 }
 
-/* Projects container (spacing between entries) */
+.page-subtitle {
+  font-size: 15px;
+  font-family: monospace;
+  color: rgba(244, 244, 245, 0.28);
+  letter-spacing: 0.05em;
+  margin-top: -0.5rem;
+}
+
+/* Projects container */
 .projects {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-/* Each project block (system / log entry feel) */
+/* Each project block */
 .project {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Project ID (log-style metadata) */
+/* Project ID */
 .project-id {
   font-family: monospace;
   font-size: 0.85rem;
@@ -74,11 +199,37 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* Meta info (stack + description) */
+/* Meta info */
 .project-meta {
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.95rem;
+}
+
+/* Stack tags */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+  justify-content: center;
+}
+
+.stack-tag {
+  font-size: 11px;
+  font-family: monospace;
+  color: rgba(244, 244, 245, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* Project links */
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
 /* Lists */
@@ -90,4 +241,11 @@ ul {
 
 li {
   margin-bottom: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header {
+    padding: 0.85rem 1.25rem;
+  }
 }
