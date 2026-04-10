@@ -2,19 +2,24 @@
 import "../styles/global.css";
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="M — Portfolio" />
     <title>M — Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>M</text></svg>" />
+    <script is:inline>
+      const saved = localStorage.getItem("theme");
+      const preferred = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", saved || preferred);
+    </script>
   </head>
   <body>
     <header>
       <a href="/" class="monogram">M/</a>
       <nav>
-        <a href="/">home</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">◐</button>
       </nav>
     </header>
     <main>
@@ -23,5 +28,15 @@ import "../styles/global.css";
     <footer>
       © 2026 M
     </footer>
+    <script is:inline>
+      const btn = document.getElementById("theme-toggle");
+
+      btn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      });
+    </script>
   </body>
 </html>
