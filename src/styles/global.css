@@ -116,7 +116,7 @@ nav a:hover {
   font-size: 20px;
   font-family: monospace;
   letter-spacing: 0.02em;
-  padding: 0;
+  padding: 0.5rem;
   transition: color 0.15s;
 }
 
