@@ -10,8 +10,7 @@ import "../styles/global.css";
     <title>M — Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>M</text></svg>" />
     <script is:inline>
-      const saved = localStorage.getItem("theme");
-      document.documentElement.setAttribute("data-theme", saved || "dark");
+      document.documentElement.setAttribute("data-theme", "dark");
     </script>
   </head>
   <body>
@@ -34,7 +33,6 @@ import "../styles/global.css";
         const current = document.documentElement.getAttribute("data-theme");
         const next = current === "dark" ? "light" : "dark";
         document.documentElement.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
       });
     </script>
   </body>
