@@ -42,6 +42,7 @@ This project uses [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) princ
 ## [2026-04-11]
 - Implemented dark/light mode feature
 - Dockerised portfolio - created docker workflow that publishes to GHCR
+- Included portfolio into projects page
 
 ---
 

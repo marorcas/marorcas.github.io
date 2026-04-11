@@ -1,23 +1,9 @@
 export const projects = [
   {
     id: "001",
-    title: "Project 1",
-    description: "Description 1",
-    stack: ["Tool 1", "Tool 2"],
-    link: "#",
-  },
-  {
-    id: "002",
-    title: "Project 2",
-    description: "Description 2",
-    stack: ["Tool 1", "Tool 2"],
-    link: "#",
-  },
-    {
-    id: "003",
-    title: "Project 3",
-    description: "Description 3",
-    stack: ["Tool 1", "Tool 2"],
-    link: "#",
+    title: "Personal Portfolio",
+    description: "Personal portfolio built with Astro and CSS. Features dark/light mode, automated CI/CD via GitHub Actions, and a Dockerised setup with image published to GHCR.",
+    stack: ["Astro", "CSS", "Docker", "GitHub Actions", "GitHub Pages", "GHCR"],
+    link: "https://github.com/marorcas/marorcas.github.io",
   }
 ];
